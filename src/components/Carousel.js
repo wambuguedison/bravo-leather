@@ -5,12 +5,39 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Container } from "react-bootstrap";
 import "./Carousel.css";
 
+const options = {
+  responsive: {
+    0: {
+      items: 1,
+      nav: true,
+    },
+    600: {
+      items: 3,
+      nav: false,
+    },
+    1000: {
+      items: 5,
+      nav: true,
+      loop: false,
+    },
+  },
+  dots: true,
+  autoPlay: true,
+};
+
 class Carousel extends React.Component {
   render() {
     return (
       <div>
         <Container fluid>
-          <OwlCarousel items={3} className="owl-theme" loop nav margin={10}>
+          <OwlCarousel
+            items={3}
+            className="owl-theme"
+            loop
+            nav
+            margin={10}
+            {...options}
+          >
             <div>
               <img
                 className="img"
