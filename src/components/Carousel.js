@@ -23,6 +23,7 @@ const options = {
   },
   dots: true,
   autoPlay: true,
+  autoplayTimeout: 3000,
 };
 
 class Carousel extends React.Component {
