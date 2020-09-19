@@ -40,42 +40,42 @@ class Carousel extends React.Component {
           >
             <div>
               <img
-                className="img"
+                className="img rounded"
                 src={"assets/img/images(3).jpg"}
                 alt={{}}
               ></img>
             </div>
             <div>
               <img
-                className="img"
+                className="img rounded"
                 src={"assets/img/images(1).jpg"}
                 alt={{}}
               ></img>
             </div>
             <div>
               <img
-                className="img"
+                className="img rounded"
                 src={"assets/img/images(5).jpg"}
                 alt={{}}
               ></img>
             </div>
             <div>
               <img
-                className="img"
+                className="img rounded"
                 src={"assets/img/images(8).jpg"}
                 alt={{}}
               ></img>
             </div>
             <div>
               <img
-                className="img"
+                className="img rounded"
                 src={"assets/img/images(6).jpg"}
                 alt={{}}
               ></img>
             </div>
             <div>
               <img
-                className="img"
+                className="img rounded"
                 src={"assets/img/images(7).jpg"}
                 alt={{}}
               ></img>
