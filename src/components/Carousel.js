@@ -25,6 +25,14 @@ const options = {
   autoPlay: true,
   autoplayTimeout: 3000,
 };
+const images = [
+  "assets/img/images(3).jpg",
+  "assets/img/images(1).jpg",
+  "assets/img/images(5).jpg",
+  "assets/img/images(8).jpg",
+  "assets/img/images(6).jpg",
+  "assets/img/images(7).jpg",
+];
 
 class Carousel extends React.Component {
   render() {
@@ -39,48 +47,13 @@ class Carousel extends React.Component {
             margin={10}
             {...options}
           >
-            <div>
-              <img
-                className="img rounded"
-                src={"assets/img/images(3).jpg"}
-                alt={{}}
-              ></img>
-            </div>
-            <div>
-              <img
-                className="img rounded"
-                src={"assets/img/images(1).jpg"}
-                alt={{}}
-              ></img>
-            </div>
-            <div>
-              <img
-                className="img rounded"
-                src={"assets/img/images(5).jpg"}
-                alt={{}}
-              ></img>
-            </div>
-            <div>
-              <img
-                className="img rounded"
-                src={"assets/img/images(8).jpg"}
-                alt={{}}
-              ></img>
-            </div>
-            <div>
-              <img
-                className="img rounded"
-                src={"assets/img/images(6).jpg"}
-                alt={{}}
-              ></img>
-            </div>
-            <div>
-              <img
-                className="img rounded"
-                src={"assets/img/images(7).jpg"}
-                alt={{}}
-              ></img>
-            </div>
+            {images.map((image) => {
+              return (
+                <div>
+                  <img className="img rounded" src={image} alt={{}} />
+                </div>
+              );
+            })}
           </OwlCarousel>
         </Container>
       </div>
