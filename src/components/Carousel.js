@@ -5,58 +5,55 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Container } from "react-bootstrap";
 import "./Carousel.css";
 
-const options = {
-  responsive: {
-    0: {
-      items: 1,
-      nav: false,
-    },
-    600: {
-      items: 3,
-      nav: false,
-    },
-    1000: {
-      items: 5,
-      nav: true,
-      loop: false,
-    },
-  },
-  dots: true,
-  autoPlay: true,
-  autoplayTimeout: 3000,
-};
-const images = [
-  "assets/img/images(3).jpg",
-  "assets/img/images(1).jpg",
-  "assets/img/images(5).jpg",
-  "assets/img/images(8).jpg",
-  "assets/img/images(6).jpg",
-  "assets/img/images(7).jpg",
-];
-
 class Carousel extends React.Component {
+  state = {
+    options: {
+      responsive: {
+        0: {
+          items: 1,
+          nav: false,
+        },
+        600: {
+          items: 3,
+          nav: false,
+        },
+        1000: {
+          items: 5,
+          nav: false,
+          loop: false,
+        },
+      },
+      dots: true,
+      autoPlay: true,
+      loop: true,
+      autoplayTimeout: 3000,
+      margin: 10,
+    },
+    images: [
+      "assets/img/images(3).jpg",
+      "assets/img/images(1).jpg",
+      "assets/img/images(5).jpg",
+      "assets/img/images(8).jpg",
+      "assets/img/images(6).jpg",
+      "assets/img/images(7).jpg",
+    ],
+  };
+
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Container fluid>
-          <OwlCarousel
-            items={3}
-            className="owl-theme"
-            loop
-            nav
-            margin={10}
-            {...options}
-          >
-            {images.map((image) => {
+          <OwlCarousel items={3} className="owl-theme" {...this.state.options}>
+            {this.state.images.map((image) => {
               return (
-                <div>
+                <div key={this.state.images.indexOf(image)}>
                   <img className="img rounded" src={image} alt={{}} />
                 </div>
               );
             })}
           </OwlCarousel>
         </Container>
-      </div>
+      </React.Fragment>
     );
   }
 }
