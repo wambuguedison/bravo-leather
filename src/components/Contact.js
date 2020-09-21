@@ -11,7 +11,7 @@ library.add(fas, fab);
 class Info extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Jumbotron fluid>
           <Container>
             <h4>Get in touch with us</h4>
@@ -28,7 +28,7 @@ class Info extends React.Component {
             </div>
           </Container>
         </Jumbotron>
-      </div>
+      </React.Fragment>
     );
   }
 }

@@ -5,7 +5,7 @@ import "./Info.css";
 class Info extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Jumbotron fluid>
           <Container>
             <h3>Welcome to Bravo leather</h3>
@@ -15,7 +15,7 @@ class Info extends React.Component {
             </p>
           </Container>
         </Jumbotron>
-      </div>
+      </React.Fragment>
     );
   }
 }
