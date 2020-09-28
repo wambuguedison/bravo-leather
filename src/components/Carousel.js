@@ -43,7 +43,11 @@ class Carousel extends React.Component {
     return (
       <React.Fragment>
         <Container fluid>
-          <OwlCarousel items={3} className="owl-theme" {...this.state.options}>
+          <OwlCarousel
+            items={3}
+            className="owl-theme pt-2"
+            {...this.state.options}
+          >
             {this.state.images.map((image) => {
               return (
                 <div key={this.state.images.indexOf(image)}>
